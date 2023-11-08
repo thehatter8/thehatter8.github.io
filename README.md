@@ -30,9 +30,9 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install libdumbnet-dev`
   
-  * "But why is it called dumbnet?"
+  * "But why is it called lib**dumb**net and not just lib**d**net ?"
   
-  * Not sure why they chose "dumb" but libdnet was apparently a legacy library in Debian so they changed the name.
+  * Not sure why they chose "dumb" but libdnet is apparently a legacy library in Debian so they changed the name of the libdnet package we're using to libdumbnet.
 
 * hwloc
   
@@ -66,17 +66,17 @@ Start by checking for or installing the following, they are required for buildin
   
   `cd ~` (or wherever you prefer to hold all these git clones)
   
-  `git clone https://github.com/the-tcpdump-group/libpcap.git`
+  {% highlight bash %}git clone https://github.com/the-tcpdump-group/libpcap.git
   
-  `cd libpcap`
+  cd libpcap
   
-  `./autogen.sh`
+  ./autogen.sh
   
-  `./configure --prefix=/usr/local`
+  ./configure --prefix=/usr/local
   
-  `make`
+  make
   
-  `sudo make install`
+  sudo make install{% endhighlight %}
   
   * Requires bison and flex before it can be installed
     
