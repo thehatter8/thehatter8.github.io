@@ -114,11 +114,8 @@ Start by checking for or installing the following, they are required for buildin
   
   ```bash
   cd ~ #or whatever dir you chose for libpcap
-  
   git clone https://luajit.org/git/luajit.git
-  
   cd luajit
-  
   make && sudo make install
   ```
 
