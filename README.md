@@ -15,8 +15,6 @@ Start by checking for or installing the following, they are required for buildin
   `sudo apt install g++`
   
   * On my first attempt at installing Snort, I googled "C++ 14 compatible compiler" and manually installed GCC (some version above 11.4) as their site claims it is C++14 compatible. I'm sure it works just fine for other applications but this did not work, as when I got to the snort3 build it failed for "missing c++ compiler" or similarly worded error. I then installed g++ and got one step beyond the failure. In a second VM everything worked fine with only g++ installed and without any GCC installation.
-  
-  * 
 
 * **cmake**
   
@@ -31,14 +29,22 @@ Start by checking for or installing the following, they are required for buildin
 * dnet
   
   `sudo apt install libdumbnet-dev`
+  
+  * "But why is it called dumbnet?"
+  
+  * Not sure why they chose "dumb" but libdnet was apparently a legacy library in Debian so they changed the name.
 
 * hwloc
   
   `sudo apt install libhwloc-dev`
+  
+  * Does not work with `sudo apt install hwloc`
 
 * OpenSSL
   
   `sudo apt install libssl-dev`
+  
+  * Even if you already have OpenSSL installed 
 
 * bison
   
