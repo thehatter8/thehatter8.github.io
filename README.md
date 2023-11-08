@@ -210,3 +210,7 @@ Using Snort
     * `sudo find / -name snort_defaults.lua`
   
   * It doesn't really matter where they are as you call them on the command line, but inside each lua file they are expecting a specific location. Let's get into that now.
+
+* You can technically run off a list of rules using `/path/to/snort -R nameof.rules` but the better way is to include the rules in your lua configuration and call it with `/path/to/snort -c /path/to/snort.lua`
+
+* Let's start by modifying snort.lua
