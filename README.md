@@ -4,7 +4,17 @@
 
  I got kind of annoyed by the guide on the snort website/github repo so I decided to make my own guide. This install makes use of `apt install` a lot instead of building software using `make` like the guides suggest. I found this to be a lot faster and easier when you can just use `apt` for almost everything and `make` only when required. If you would like to copy me exactly I am starting from a fresh Ubuntu 22.04 VM immediately after the installation, first reboot, and login. I am snortusr working from `~` or `/home/snortusr/` for all my `git clone` uses.
 
+
+
+**TESTING DELETE THE BELOW**
+
 <img src="assets/images/test.png"/>
+
+```bash 
+Do this with <img src='assets/images/someimage.png'/>
+```
+
+**TESTING DELETE THE ABOVE**
 
 ### Requirements Pre-Snort install
 
@@ -39,8 +49,6 @@ Start by checking for or installing the following, they are required for buildin
   `sudo apt install libhwloc-dev`
   
   * Does not work with `sudo apt install hwloc`
-    
-    
 
 * OpenSSL
   
@@ -49,19 +57,13 @@ Start by checking for or installing the following, they are required for buildin
     * `apt list --installed | grep "open*"` will show current installations
   
   `sudo apt install libssl-dev` to install the proper package
-  
-  
 
 * bison
   
   `sudo apt install bison`
-  
-  
 - flex
   
   `sudo apt install flex`
-  
-  
 * pcap
   
   * Requires bison and flex before it can be installed
@@ -79,20 +81,14 @@ Start by checking for or installing the following, they are required for buildin
   make
   sudo make install
   ```
-  
-  
 
 * pcre
   
   `sudo apt install libpcre3-dev`
-  
-  
 
 * pkg-config
   
   `sudo apt install pkg-config`
-  
-  
 
 * zlib
   
@@ -101,24 +97,18 @@ Start by checking for or installing the following, they are required for buildin
   * If you try typing `zlib` into the terminal before installing the above, you can see zlib is installed by default. This doesn't matter as snort is very particular. Funny enough, this Stackoverflow  post is downvoted three times but it absolutely solved my problem when building snort3 returned "could NOT find zlib."
     
     * [ubuntu 18.04 - Could NOT find ZLIB (missing: ZLIB_LIBRARY) (found version &quot;1.2.11&quot;) - Stack Overflow](https://stackoverflow.com/questions/54923690/could-not-find-zlib-missing-zlib-library-found-version-1-2-11)
-  
-  
 
 * libtool
   
   `sudo apt install libtool`
   
   * Was already installed on mine, I believe from a package leading up to pcap
-    
-    
 
 * libunwind
   
   `sudo apt install libunwind-dev`
   
   * The docs say this is an optional package, but either libdaq or snort3 wouldn't build without it
-  
-  
 
 * LuaJIT
   
@@ -131,12 +121,6 @@ Start by checking for or installing the following, they are required for buildin
   
   make && sudo make install
   ```
-  
-  
-
-
-
-
 
 Installing LibDAQ
 
