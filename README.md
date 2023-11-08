@@ -12,7 +12,7 @@ Start by checking for or installing the following, they are required for buildin
 
 * **C++ 14 compatible compiler**
   
-  * `sudo apt install g++`
+  * {% highlight bash %}sudo apt install g++{% endhighlight %}
 
 * **cmake**
   
