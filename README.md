@@ -169,6 +169,10 @@ Installing Snort
   * `cd src` while still in the `/somedir/snort3/build` directory
   
   * `./snort -v`
+  
+  * Here's an example of calling snort from outside of the src dir. Also shows you how to properly call it with sudo
+    
+    <img src="assets/images/snortversion.png"/>
 
 Using Snort
 
@@ -177,6 +181,11 @@ Using Snort
   * In this case, use the full path to call snort. For me it would be:
     
     * `sudo /home/snortusr/snort3/build/src/snort -commands options`
+    * For example...
+    
+    <img src="assets/images/snortactive.png"/>
+    
+    * This is active monitoring. If I was running snort with rules, it might have less than 127 under "allow" and it might have more info under "detection"
 
 * Using community rules
   
@@ -190,4 +199,14 @@ Using Snort
       
       * `sudo mv snort3-community.rules /somedir/snort3/build/src/snort3-community.rules`
   
-  * Now we look for snort.lua
+  * Now we look for snort.lua and snort_defaults. This should be under
+    
+    * `/somedir/snort3/build/src/lua`
+  
+  * but you can check this to make sure by doing a quick
+    
+    * `sudo find / -name snort.lua`
+    
+    * `sudo find / -name snort_defaults.lua`
+  
+  * It doesn't really matter where they are as you call them on the command line, but inside each lua file they are expecting a specific location. Let's get into that now.
