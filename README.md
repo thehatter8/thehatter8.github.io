@@ -16,7 +16,7 @@ Start by checking for or installing the following, they are required for buildin
 
 * **cmake**
   
-  * `sudo apt install cmake`
+  * ```sudo apt install cmake```
 
 * **git**
   
