@@ -123,7 +123,7 @@ Start by checking for or installing the following, they are required for buildin
   make && sudo make install
   ```
 
-Installing LibDAQ
+### Installing LibDAQ
 
 * Start by downloading and configuring LibDAQ git files
   
@@ -149,7 +149,7 @@ Installing LibDAQ
   
   
 
-Installing Snort
+### Installing Snort
 
 * Start by downloading and configuring the Snort3 git repository
   
@@ -175,7 +175,7 @@ Installing Snort
     
     <img src="assets/images/snortversion.png"/>
 
-Using Snort
+### Using Snort
 
 * Some snort commands seem to require sudo
   
