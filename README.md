@@ -1,14 +1,14 @@
 # Snort3 Installation Guide
 
+### Foreword
+
+ I got kind of annoyed by the guide on the snort website/github repo so I decided to make my own guide. This install makes use of `apt install` a lot instead of building software using `make` like the guides suggest. I found this to be wayyyyy faster when you can just use `apt` for almost everything and `make` when required. If you would like to copy me exactly I am starting from a fresh Ubuntu 22.04 VM immediately after the installation, first reboot, and login. I am 
+
+<img src="assets/images/test.png"/>
+
 ### Requirements Pre-Snort install
 
-If you would like to copy me exactly I am starting from a fresh Ubuntu 22.04 VM immediately after the installation, first reboot, and login. 
-
-
-
 Start by checking for or installing the following, they are required for building some of the packages we need.
-
-
 
 * **C++ 14 compatible compiler**
   
@@ -21,8 +21,6 @@ Start by checking for or installing the following, they are required for buildin
 * **git**
   
   `sudo apt install git`
-
-
 
 ### Main Snort requirements
 
@@ -64,35 +62,35 @@ Start by checking for or installing the following, they are required for buildin
 
 * pcre
   
-  * `sudo apt install libpcre3-dev`
+  `sudo apt install libpcre3-dev`
 
 * pkg-config
   
-  * `sudo apt install pkg-config`
+  `sudo apt install pkg-config`
 
 * zlib
   
-  * `sudo apt install zlib1g-dev`
+  `sudo apt install zlib1g-dev`
 
 * libtool
   
-  * `sudo apt install libtool`
+  `sudo apt install libtool`
   
   * Was already installed on mine, probably from another library
 
 * libunwind
   
-  * `sudo apt install libunwind-dev`
+  `sudo apt install libunwind-dev`
 
 * LuaJIT
   
-  - `cd ~` or whatever dir you chose for libpcap
+  `cd ~` or whatever dir you chose for libpcap
   
-  - `git clone https://luajit.org/git/luajit.git`
+  `git clone https://luajit.org/git/luajit.git`
   
-  - `cd luajit`
+  `cd luajit`
   
-  - `make && sudo make install`
+  `make && sudo make install`
 
 Installing LibDAQ
 
