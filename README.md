@@ -39,19 +39,29 @@ Start by checking for or installing the following, they are required for buildin
   `sudo apt install libhwloc-dev`
   
   * Does not work with `sudo apt install hwloc`
+    
+    
 
 * OpenSSL
   
-  `sudo apt install libssl-dev`
+  * Even if you already have OpenSSL installed, it doesn't count for our purposes.
+    
+    * `apt list --installed | grep "open*"` will show current installations
   
-  * Even if you already have OpenSSL installed 
+  `sudo apt install libssl-dev` to install the proper package
+  
+  
 
 * bison
   
   `sudo apt install bison`
+  
+  
 - flex
   
   `sudo apt install flex`
+  
+  
 * pcap
   
   `cd ~` (or wherever you prefer to hold all these git clones)
@@ -69,28 +79,40 @@ Start by checking for or installing the following, they are required for buildin
   `sudo make install`
   
   * Requires bison and flex before it can be installed
+    
+    
 
 * pcre
   
   `sudo apt install libpcre3-dev`
+  
+  
 
 * pkg-config
   
   `sudo apt install pkg-config`
+  
+  
 
 * zlib
   
   `sudo apt install zlib1g-dev`
+  
+  
 
 * libtool
   
   `sudo apt install libtool`
   
   * Was already installed on mine, probably from another library
+    
+    
 
 * libunwind
   
   `sudo apt install libunwind-dev`
+  
+  
 
 * LuaJIT
   
@@ -101,6 +123,10 @@ Start by checking for or installing the following, they are required for buildin
   `cd luajit`
   
   `make && sudo make install`
+
+
+
+
 
 Installing LibDAQ
 
