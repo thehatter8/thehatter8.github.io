@@ -24,7 +24,7 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install g++`
   
-  * On my first attempt at installing Snort, I googled "C++ 14 compatible compiler" and manually installed GCC (some version above 11.4) as their site claims it is C++14 compatible. I'm sure it works just fine for other applications but this did not work, as when I got to the snort3 build it failed for "missing c++ compiler" or similarly worded error. I then installed g++ and got one step beyond the failure. In a second VM everything worked fine with only g++ installed and without any GCC installation.
+  * On my first attempt at installing Snort, I googled "C++ 14 compatible compiler" and manually installed GCC (some version above 11.4) as their site claims it is C++14 compatible (by the way I am not debating that fact. It is, in fact, compatible.... I'm sure it works just fine for other applications) but this did not work, as when I got to the snort3 build it failed for "missing c++ compiler" or similarly worded error. I then installed g++ and got past that error. In a second VM everything worked fine with only g++ installed and without any GCC installation.
 
 * **cmake**
   
@@ -36,7 +36,7 @@ Start by checking for or installing the following, they are required for buildin
 
 ### Main Snort requirements
 
-* dnet
+* **dnet**
   
   `sudo apt install libdumbnet-dev`
   
@@ -44,13 +44,13 @@ Start by checking for or installing the following, they are required for buildin
   
   * Not sure why they chose "dumb" but libdnet is apparently a legacy library in Debian so they changed the name of the libdnet package we're using to libdumbnet.
 
-* hwloc
+* **hwloc**
   
   `sudo apt install libhwloc-dev`
   
   * Does not work with `sudo apt install hwloc`
 
-* OpenSSL
+* **OpenSSL**
   
   * Even if you already have OpenSSL installed, it doesn't count for our purposes.
     
@@ -58,15 +58,15 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install libssl-dev` to install the proper package
 
-* bison
+* **bison**
   
   `sudo apt install bison`
-- flex
+- **flex**
   
   `sudo apt install flex`
-* pcap
+* **pcap**
   
-  * Requires bison and flex before it can be installed
+  * Requires **bison** and **flex** before it can be installed
   
   ```bash
   cd ~ # Or your location of choice
@@ -82,15 +82,15 @@ Start by checking for or installing the following, they are required for buildin
   sudo make install
   ```
 
-* pcre
+* **pcre**
   
   `sudo apt install libpcre3-dev`
 
-* pkg-config
+* **pkg-config**
   
   `sudo apt install pkg-config`
 
-* zlib
+* **zlib**
   
   `sudo apt install zlib1g-dev`
   
@@ -98,22 +98,22 @@ Start by checking for or installing the following, they are required for buildin
     
     * [ubuntu 18.04 - Could NOT find ZLIB (missing: ZLIB_LIBRARY) (found version &quot;1.2.11&quot;) - Stack Overflow](https://stackoverflow.com/questions/54923690/could-not-find-zlib-missing-zlib-library-found-version-1-2-11)
 
-* libtool
+* **libtool**
   
   `sudo apt install libtool`
   
   * Was already installed on mine, I believe from a package leading up to pcap
 
-* libunwind
+* **libunwind**
   
   `sudo apt install libunwind-dev`
   
   * The docs say this is an optional package, but either libdaq or snort3 wouldn't build without it
 
-* LuaJIT
+* **LuaJIT**
   
   ```bash
-  cd ~ or whatever dir you chose for libpcap
+  cd ~ #or whatever dir you chose for libpcap
   
   git clone https://luajit.org/git/luajit.git
   
@@ -126,25 +126,27 @@ Installing LibDAQ
 
 * Start by downloading and configuring LibDAQ git files
   
-  * `cd ~` or whatever dir you chose for libpcap and luajit
+  ```bash
+  cd ~ # or whatever dir you chose for libpcap and LuaJIT
+  git clone https://github.com/snort3/libdaq.git
+  cd libdaq
+  ./bootstrap
+  ./configure` # don't do the prefix like implied in the docs, it will break everything
+  make install # I had to use sudo for this to work properly
+  ```
   
-  * `git clone https://github.com/snort3/libdaq.git`
   
-  * `cd libdaq`
-  
-  * `./bootstrap`
-  
-  * `./configure` don't do the prefix like implied in the docs, it will break everything
-  
-  * `make install` I had to use `sudo` for this to work properly
 
 * Now run ldconfig to bind everything together
   
   * If it worked properly you will not see any messages appear. For example:
   
-  * `snortusr@snort3srv:~/snort3/build/src$ sudo ldconfig`
+  ```bash
+  snortusr@snort3srv:~/snort3/build/src$ sudo ldconfig
+  snortusr@snort3srv:~/snort3/build/src$
+  ```
   
-  * `snortusr@snort3srv:~/snort3/build/src$     `
+  
 
 Installing Snort
 
