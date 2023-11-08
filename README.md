@@ -78,7 +78,7 @@ Start by checking for or installing the following, they are required for buildin
 
 * LuaJIT
   
-  - `cd ~` or whatever dir you chose for pcap
+  - `cd ~` or whatever dir you chose for libpcap
   
   - `git clone https://luajit.org/git/luajit.git`
   
@@ -90,7 +90,7 @@ Installing LibDAQ
 
 * Start by downloading and configuring LibDAQ git files
   
-  * `cd ~` or whatever dir you chose for pcap and LuaJIT
+  * `cd ~` or whatever dir you chose for libpcap and luajit
   
   * `git clone https://github.com/snort3/libdaq.git`
   
@@ -113,6 +113,8 @@ Installing LibDAQ
 Installing Snort
 
 * Start by downloading and configuring the Snort3 git repository
+  
+  * `cd ~` or whatever dir you chose for libdaq, libpcap, and luajit
   
   * `git clone https://github.com/snort3/snort3.git`
   
