@@ -64,23 +64,23 @@ Start by checking for or installing the following, they are required for buildin
   
 * pcap
   
-  `cd ~` (or wherever you prefer to hold all these git clones)
-  
-  {% highlight bash %}git clone https://github.com/the-tcpdump-group/libpcap.git
-  
-  cd libpcap
-  
-  ./autogen.sh
-  
-  ./configure --prefix=/usr/local
-  
-  make
-  
-  sudo make install{% endhighlight %}
-  
   * Requires bison and flex before it can be installed
-    
-    
+  
+  ```bash
+  cd ~ # Or your location of choice
+  # Clone the repository
+  git clone https://github.com/the-tcpdump-group/libpcap.git
+  # Enter the new folder
+  cd libpcap
+  # Since we cloned from github, we have to run autogen before configure
+  ./autogen.sh
+  ./configure --prefix=/usr/local
+  # Now we can make and make install
+  make
+  sudo make install
+  ```
+  
+  
 
 * pcre
   
