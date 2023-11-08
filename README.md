@@ -98,6 +98,10 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install zlib1g-dev`
   
+  * If you try the following command before the one above, you can see zlib is installed by default. This doesn't matter as snort is very particular and weird. Funny enough, this Stackoverflow  post is downvoted three times but it's absolutely the right answer in our case.
+  
+  * [ubuntu 18.04 - Could NOT find ZLIB (missing: ZLIB_LIBRARY) (found version &quot;1.2.11&quot;) - Stack Overflow](https://stackoverflow.com/questions/54923690/could-not-find-zlib-missing-zlib-library-found-version-1-2-11)
+  
   
 
 * libtool
