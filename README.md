@@ -190,14 +190,24 @@ Using Snort
 * Using community rules
   
   * `curl -L https://snort.org/downloads/community/snort3-community-rules.tar.gz > rules.tar.gz`
+    
+    * This allows curl to follow redirects, then saves file to rules.tar.gz
   
   * `tar xvf rules.tar.gz`
     
-    * This gives you `sid-msg.map` and `snort3-community.rules` which we can now move into our somedir/snort3/build/src/ folder
+    * x - eXtract
+    
+    * v - Verbose
+    
+    * f - Filename
+    
+    * This extracts to a new directory called `snort3-community-rules`
       
-      * `sudo mv sid-msg.map /somedir/snort3/build/src/sid-msg.map`
-      
-      * `sudo mv snort3-community.rules /somedir/snort3/build/src/snort3-community.rules`
+      * `cd` inside to see `sid-msg.map` and `snort3-community.rules` which we can now move into our `/somedir/snort3/build/src/` folder
+        
+        * `sudo mv sid-msg.map /somedir/snort3/build/src/sid-msg.map`
+        
+        * `sudo mv snort3-community.rules /somedir/snort3/build/src/snort3-community.rules`
   
   * Now we look for snort.lua and snort_defaults. This should be under
     
