@@ -152,19 +152,17 @@ Installing Snort
 
 * Start by downloading and configuring the Snort3 git repository
   
-  * `cd ~` or whatever dir you chose for libdaq, libpcap, and luajit
+  ```bash
+  - cd ~ # or whatever dir you chose for libdaq, libpcap, and luajit
+  - git clone https://github.com/snort3/snort3.git
+  - cd snort3
+  - ./configure_cmake.sh # Don't use prefix unless you really need to, defaults are fine
+  - cd build
+  - make -j $(nproc)
+  - sudo make install
+  ```
   
-  * `git clone https://github.com/snort3/snort3.git`
   
-  * `cd snort3`
-  
-  * `./configure_cmake.sh` Don't use prefix unless you really need to, defaults are fine
-  
-  * `cd build` 
-  
-  * `make -j $(nproc)`
-  
-  * `sudo make install`
 
 * Test the new Snort installation
   
