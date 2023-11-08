@@ -20,7 +20,7 @@ Do this with <img src='assets/images/someimage.png'/>
 
 **TESTING DELETE THE ABOVE**
 
-### Requirements Pre-Snort install
+### Requirements Before Snort install
 
 Start by checking for or installing the following, they are required for building some of the packages we need.
 
