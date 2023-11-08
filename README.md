@@ -2,19 +2,27 @@
 
 ### Requirements Pre-Snort install
 
-Start by checking for or installing the following, they are required for building some of the packages we need
+If you would like to copy me exactly I am starting from a fresh Ubuntu 22.04 VM immediately after the installation, first reboot, and login. 
 
-* C++ 14 compatible compiler
+
+
+Start by checking for or installing the following, they are required for building some of the packages we need.
+
+
+
+* **C++ 14 compatible compiler**
   
   * `sudo apt install g++`
 
-* cmake
+* **cmake**
   
   * `sudo apt install cmake`
 
-* git
+* **git**
   
   * `sudo apt install git`
+
+
 
 ### Main Snort requirements
 
