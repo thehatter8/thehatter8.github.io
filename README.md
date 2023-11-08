@@ -2,8 +2,6 @@
 
 ### Requirements Pre-Snort install
 
-
-
 Start by checking for or installing the following, they are required for building some of the packages we need
 
 * C++ 14 compatible compiler
@@ -17,10 +15,8 @@ Start by checking for or installing the following, they are required for buildin
 * git
   
   * `sudo apt install git`
-    
-    
 
-Now to move on to the main Snort requirements
+### Main Snort requirements
 
 * dnet
   
@@ -38,13 +34,15 @@ Now to move on to the main Snort requirements
   
   - `sudo apt install bison`
 - flex
+  
   - `sudo apt install flex`
-
 * pcap
   
-  * `sudo apt install libpcap-dev` - probably won't work
+  * `cd ~` (or wherever you prefer to hold all these git clones)
   
   * `git clone https://github.com/the-tcpdump-group/libpcap.git`
+  
+  * `cd libpcap`
   
   * `./autogen.sh`
   
@@ -54,7 +52,7 @@ Now to move on to the main Snort requirements
   
   * `sudo make install`
   
-  * Requires bison and flex
+  * Requires bison and flex before it can be installed
 
 * pcre
   
@@ -80,17 +78,19 @@ Now to move on to the main Snort requirements
 
 * LuaJIT
   
+  - `cd ~` or whatever dir you chose for pcap
+  
   - `git clone https://luajit.org/git/luajit.git`
   
   - `cd luajit`
   
   - `make && sudo make install`
 
-
-
 Installing LibDAQ
 
 * Start by downloading and configuring LibDAQ git files
+  
+  * `cd ~` or whatever dir you chose for pcap and LuaJIT
   
   * `git clone https://github.com/snort3/libdaq.git`
   
@@ -109,8 +109,6 @@ Installing LibDAQ
   * `snortusr@snort3srv:~/snort3/build/src$ sudo ldconfig`
   
   * `snortusr@snort3srv:~/snort3/build/src$     `
-
-
 
 Installing Snort
 
@@ -134,8 +132,6 @@ Installing Snort
   
   * `./snort -v`
 
-
-
 Using Snort
 
 * Some snort commands seem to require sudo
@@ -157,19 +153,3 @@ Using Snort
       * `sudo mv snort3-community.rules /somedir/snort3/build/src/snort3-community.rules`
   
   * Now we look for snort.lua
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
