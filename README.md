@@ -11,8 +11,8 @@ Start by checking for or installing the following, they are required for buildin
 
 
 * **C++ 14 compatible compiler**
-
-* {% highlight bash %}sudo apt install g++{% endhighlight %}
+  
+  `sudo apt install g++`
 
 * **cmake**
   
@@ -20,7 +20,7 @@ Start by checking for or installing the following, they are required for buildin
 
 * **git**
   
-  * `sudo apt install git`
+  `sudo apt install git`
 
 
 
@@ -28,37 +28,37 @@ Start by checking for or installing the following, they are required for buildin
 
 * dnet
   
-  * `sudo apt install libdumbnet-dev`
+  `sudo apt install libdumbnet-dev`
 
 * hwloc
   
-  * `sudo apt install libhwloc-dev`
+  `sudo apt install libhwloc-dev`
 
 * OpenSSL
   
-  * `sudo apt install libssl-dev`
+  `sudo apt install libssl-dev`
 
 * bison
   
-  - `sudo apt install bison`
+  `sudo apt install bison`
 - flex
   
-  - `sudo apt install flex`
+  `sudo apt install flex`
 * pcap
   
-  * `cd ~` (or wherever you prefer to hold all these git clones)
+  `cd ~` (or wherever you prefer to hold all these git clones)
   
-  * `git clone https://github.com/the-tcpdump-group/libpcap.git`
+  `git clone https://github.com/the-tcpdump-group/libpcap.git`
   
-  * `cd libpcap`
+  `cd libpcap`
   
-  * `./autogen.sh`
+  `./autogen.sh`
   
-  * `./configure --prefix=/usr/local`
+  `./configure --prefix=/usr/local`
   
-  * `make`
+  `make`
   
-  * `sudo make install`
+  `sudo make install`
   
   * Requires bison and flex before it can be installed
 
