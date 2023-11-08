@@ -6,7 +6,7 @@
 
 
 
-Please do everything in exactly the order shown in this guide. Building LuaJIT first is not possible, and building LibDAQ requires absolutely everything else first. If you do not follow the process in exact order from this guide there may be build issues and there's nothing I can do to help you.
+Please do everything in exactly the order shown in this guide. Building LuaJIT first is not possible, and building LibDAQ requires absolutely everything else (except snort3) first. If you do not follow the process in exact order from this guide there may be build issues and there's nothing I can do to help you.
 
 
 
