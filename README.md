@@ -98,9 +98,9 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install zlib1g-dev`
   
-  * If you try typing `zlib` into the terminal before installing the above, you can see zlib is installed by default. This doesn't matter as snort is very particular. Funny enough, this Stackoverflow  post is downvoted three times but it absolutely solved my problem when building snort3 returned "zlib not found."
-  
-  * [ubuntu 18.04 - Could NOT find ZLIB (missing: ZLIB_LIBRARY) (found version &quot;1.2.11&quot;) - Stack Overflow](https://stackoverflow.com/questions/54923690/could-not-find-zlib-missing-zlib-library-found-version-1-2-11)
+  * If you try typing `zlib` into the terminal before installing the above, you can see zlib is installed by default. This doesn't matter as snort is very particular. Funny enough, this Stackoverflow  post is downvoted three times but it absolutely solved my problem when building snort3 returned "could NOT find zlib."
+    
+    * [ubuntu 18.04 - Could NOT find ZLIB (missing: ZLIB_LIBRARY) (found version &quot;1.2.11&quot;) - Stack Overflow](https://stackoverflow.com/questions/54923690/could-not-find-zlib-missing-zlib-library-found-version-1-2-11)
   
   
 
@@ -108,7 +108,7 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install libtool`
   
-  * Was already installed on mine, probably from another library
+  * Was already installed on mine, I believe from a package leading up to pcap
     
     
 
@@ -116,17 +116,23 @@ Start by checking for or installing the following, they are required for buildin
   
   `sudo apt install libunwind-dev`
   
+  * The docs say this is an optional package, but either libdaq or snort3 wouldn't build without it
+  
   
 
 * LuaJIT
   
-  `cd ~` or whatever dir you chose for libpcap
+  ```bash
+  cd ~ or whatever dir you chose for libpcap
   
-  `git clone https://luajit.org/git/luajit.git`
+  git clone https://luajit.org/git/luajit.git
   
-  `cd luajit`
+  cd luajit
   
-  `make && sudo make install`
+  make && sudo make install
+  ```
+  
+  
 
 
 
