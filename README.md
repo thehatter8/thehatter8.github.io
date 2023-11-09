@@ -2,23 +2,13 @@
 
 ### Foreword
 
- I got kind of annoyed by the guide on the snort website/github repo so I decided to make my own guide. This install makes use of `apt install` a lot instead of building software using `make` like the guides suggest. I found this to be a lot faster and easier when you can just use `apt` for almost everything and `make` only when required. If you would like to copy me exactly I am starting from a fresh Ubuntu 22.04 VM immediately after the installation, first reboot, and login. I am snortusr working from `~` or `/home/snortusr/` for all my `git clone` uses.
+ I got kind of slowed down by the guide on the snort website/github repo so I decided to make my own guide. This guide makes use of `apt install` a lot instead of building software using `make` like the guides suggest. I found this to be a lot faster and easier when you can just use `apt` for almost everything and `make` only when required.
 
-
+If you would like to copy me exactly I am starting from a fresh Ubuntu 22.04 VM immediately after the installation, first reboot, and login. I am snortusr working from `~` or `/home/snortusr/` for all my `git clone` uses.
 
 Please do everything in exactly the order shown in this guide. Building LuaJIT first is not possible, and building LibDAQ requires absolutely everything else (except snort3) first. If you do not follow the process in exact order from this guide there may be build issues and there's nothing I can do to help you.
 
 
-
-**TESTING DELETE THE BELOW**
-
-<img src="assets/images/test.png"/>
-
-```bash 
-Do this with <img src='assets/images/someimage.png'/>
-```
-
-**TESTING DELETE THE ABOVE**
 
 ### Requirements Before Snort install
 
