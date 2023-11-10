@@ -123,14 +123,12 @@ Start by checking for or installing the following, they are required for buildin
   cd libdaq
   ./bootstrap
   ./configure` # don't do the prefix like implied in the docs, it will break everything
-  make install # I had to use sudo for this to work properly
+  sudo make install
   ```
   
   
 
-* Now run ldconfig to bind everything together
-  
-  * If it worked properly you will not see any messages appear. For example:
+* Now run `sudo ldconfig` to bind everything together. If it worked properly you will not see any messages appear. For example:
   
   ```bash
   snortusr@snort3srv:~/snort3/build/src$ sudo ldconfig
